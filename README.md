@@ -14,5 +14,5 @@ make install # as root / yönetici olarak çalıştırın
 
 # Requirements / Gereksinimler
 - Unix-like or Unix-based operating system
-(for example linux, freebsd, macos, qunics, etc)
+<br>(for example linux, freebsd, macos, qunics, etc)
 - readline
