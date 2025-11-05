@@ -6,7 +6,7 @@
 
 # Installation
 ```bash
-git clone https://github.com/KairaBegudiri/QyzylShell
+git clone https://github.com/TheQyzylProject/QyzylShell
 cd QyzylShell
 make install # as root / yönetici olarak çalıştırın
 ```
