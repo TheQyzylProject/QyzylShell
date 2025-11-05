@@ -23,4 +23,4 @@ On some Linux distributions, compiling programs that use the GNU Readline librar
 ```sh
 sudo make uninstall # on QyzylShell directory
 ```
-If you deleted the folder, it doesn't matter. You can download it again and use the `sudo make uninstall` command.
+If you deleted the QyzylShell folder, it doesn't matter. You can download it again and use the `sudo make uninstall` command.
