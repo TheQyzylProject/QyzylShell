@@ -1,50 +1,56 @@
-# QyzylShell v0.6 — Makefile
-CC        = gcc
-CFLAGS    = -Wall -Wextra -O2
-LDFLAGS   = -lreadline
-TARGET    = qshell
-SRC       = src/main.c
-PREFIX    = /usr/local
-BINDIR    = $(PREFIX)/bin
-INSTALL_PATH = $(BINDIR)/$(TARGET)
+# ──────────────────────────────
+# QyzylShell v2.3 Makefile
+# Kayra'nın modern, bash-like mini shell'i 💻
+# ──────────────────────────────
 
+CC       := gcc
+CFLAGS   := -Wall -Wextra -O2 -g
+LDFLAGS  := -lreadline
+TARGET   := qyzylshell
+SRC      := main.c
+OBJ      := $(SRC:.c=.o)
+
+# ──────────────────────────────
+# Varsayılan hedef
 all: $(TARGET)
 
-$(TARGET): $(SRC)
-	$(CC) $(CFLAGS) $(SRC) -o $(TARGET) $(LDFLAGS)
-	@echo "✅ Build complete: ./$(TARGET)"
+# Derleme kuralları
+$(TARGET): $(OBJ)
+	@echo "🔧 Linking $@..."
+	$(CC) $(OBJ) -o $@ $(LDFLAGS)
+	@echo "✅ Build complete: ./$@"
 
-install: $(TARGET)
-	@echo "Installing QyzylShell to system directory..."
-	mkdir -p $(BINDIR)
-	cp $(TARGET) $(INSTALL_PATH)
-	chmod 755 $(INSTALL_PATH)
+%.o: %.c
+	@echo "🧠 Compiling $<..."
+	$(CC) $(CFLAGS) -c $< -o $@
 
-	@echo "Ensuring /etc/shells contains $(INSTALL_PATH)..."
-	@if ! grep -qx '$(INSTALL_PATH)' /etc/shells; then \
-		echo '$(INSTALL_PATH)' | sudo tee -a /etc/shells >/dev/null; \
-		echo "✅ Added to /etc/shells."; \
-	else \
-		echo "ℹ️  Already present in /etc/shells."; \
-	fi
-
-	@echo "Would you like to set QyzylShell as your default shell? [y/n]"
-	@read ans; \
-	if [ "$$ans" = "y" ] || [ "$$ans" = "Y" ]; then \
-		chsh -s $(INSTALL_PATH); \
-		echo "✅ QyzylShell is now your default shell."; \
-	else \
-		echo "ℹ️  Installed but not set as default."; \
-	fi
-
-	@echo "Installation complete! Run it with: qshell"
-
-uninstall:
-	@echo "Removing QyzylShell..."
-	rm -f $(INSTALL_PATH)
-	@sed -i "\|$(INSTALL_PATH)|d" /etc/shells
-	@echo "✅ Uninstalled successfully."
+# ──────────────────────────────
+# Ekstra görevler
+run: all
+	@echo "🚀 Running QyzylShell..."
+	@./$(TARGET)
 
 clean:
-	rm -f $(TARGET)
-	@echo "Cleaned build files."
+	@echo "🧹 Cleaning build artifacts..."
+	rm -f $(OBJ) $(TARGET)
+	@echo "✨ Clean complete."
+
+install: all
+	@echo "📦 Installing to /usr/local/bin..."
+	sudo cp $(TARGET) /usr/local/bin/
+	@echo "✅ Installed: $(TARGET) → /usr/local/bin/"
+
+uninstall:
+	@echo "❌ Removing installed binary..."
+	sudo rm -f /usr/local/bin/$(TARGET)
+	@echo "🗑️  Uninstalled $(TARGET)."
+
+# ──────────────────────────────
+# Yardım mesajı
+help:
+	@echo "QyzylShell Makefile usage:"
+	@echo "  make           - Derle"
+	@echo "  make run       - Derle ve çalıştır"
+	@echo "  make clean     - Temizle"
+	@echo "  make install   - Sisteme kur"
+	@echo "  make uninstall - Kurulumu kaldır"
