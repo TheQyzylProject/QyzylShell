@@ -1,9 +1,8 @@
 # QyzylShell
-**QyzylShell**, [QUNICS](https://github.com/LibreQyzyl/qunics) için minik, estetik ve işlevsel bir unix shellidir —<br>
-**Catppuccin Mocha** renk paleti ve `readline` desteği ile gelir,  
-Akıcı bir deneyim için yerleşik komutları kullanır
+**QyzylShell** is a tiny, aesthetically pleasing and functional unix shell for [QUNICS](https://github.com/LibreQyzyl/qunics) —<br>
 
-<img width="741" height="547" alt="resim" src="https://github.com/user-attachments/assets/3f379112-9540-416c-b085-0f5203cf0ec2" />
+<img width="741" height="547" alt="resim" src="https://github.com/user-attachments/assets/b9eb347a-4b95-4467-a4c7-c7b4c5aa5bfb" />
+
 
 # Installation
 ```bash
@@ -14,5 +13,4 @@ make install # as root / yönetici olarak çalıştırın
 
 # Requirements / Gereksinimler
 - Unix-like or Unix-based operating system
-<br>(for example linux, freebsd, macos, qunics, etc)
 - readline
