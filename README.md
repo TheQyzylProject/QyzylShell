@@ -8,7 +8,7 @@
 ```sh
 git clone https://github.com/TheQyzylProject/QyzylShell
 cd QyzylShell
-make install # as root / yönetici olarak çalıştırın
+sudo make install
 ```
 target location: `/usr/local/bin/qyzylshell`
 
