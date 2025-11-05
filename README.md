@@ -1,7 +1,7 @@
 # QyzylShell
 **QyzylShell** is a tiny, aesthetically pleasing and functional unix shell for [QUNICS](https://github.com/LibreQyzyl/qunics) —<br>
 
-<img width="741" height="547" alt="resim" src="https://github.com/user-attachments/assets/b9eb347a-4b95-4467-a4c7-c7b4c5aa5bfb" />
+<img width="474" height="292" alt="resim" src="https://github.com/user-attachments/assets/4f5f475f-43ae-4018-905f-b93bb0c20dad" />
 
 
 # Installation
