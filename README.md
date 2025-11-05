@@ -10,6 +10,7 @@ git clone https://github.com/KairaBegudiri/QyzylShell
 cd QyzylShell
 make install # as root / yönetici olarak çalıştırın
 ```
+target location: `/usr/local/bin/qyzylshell`
 
 # Requirements / Gereksinimler
 - Unix-like or Unix-based operating system
