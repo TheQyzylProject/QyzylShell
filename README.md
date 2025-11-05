@@ -5,7 +5,7 @@
 
 
 # Installation
-```bash
+```sh
 git clone https://github.com/TheQyzylProject/QyzylShell
 cd QyzylShell
 make install # as root / yönetici olarak çalıştırın
@@ -18,3 +18,9 @@ On some Linux distributions, compiling programs that use the GNU Readline librar
 - Unix-like or Unix-based operating system
 - readline
 - readline-devel (for some distributions)
+
+# Uninstall
+```sh
+sudo make uninstall # on QyzylShell directory
+```
+If you deleted the folder, it doesn't matter. You can download it again and use the `sudo make uninstall` command.
