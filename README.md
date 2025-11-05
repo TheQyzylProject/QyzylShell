@@ -14,6 +14,7 @@ target location: `/usr/local/bin/qyzylshell`
 
 On some Linux distributions, compiling programs that use the GNU Readline library may require the development package (for example, `readline-devel` on Void Linux). This package provides the necessary header files such as `readline/readline.h`. Without it, the compiler will report a missing file error even if the `readline` runtime library is installed.
 
-# Requirements / Gereksinimler
+# Requirements
 - Unix-like or Unix-based operating system
 - readline
+- readline-devel (for some distributions)
