@@ -13,9 +13,11 @@
 
 # Installation
 ## Gentoo
+```shell
 sudo eselect repository add qyzyl git https://repo.qyzyl.xyz/qyzylutils/qyzyl-overlay.git
 sudo emaint sync -r qyzyl
 sudo emerge --ask qyzylshell
+```
 
 ## Manual
 ```sh
