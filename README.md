@@ -4,6 +4,13 @@
 <img width="933" height="703" alt="resim" src="https://github.com/user-attachments/assets/66397eb8-dc2a-4691-95fd-618374595684" />
 
 
+| OS    | Situation       | Stable Release Version |
+|--------------|-------------|--------------|
+| GNU/Linux | Released | QyzylShell v0.6
+| QUNICS | In development | QyzylShell 0.1
+| MacOS      | In development | X
+| BSD      | In development | X 
+
 # Installation
 ```sh
 git clone https://github.com/TheQyzylProject/QyzylShell
