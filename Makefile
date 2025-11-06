@@ -1,14 +1,33 @@
 # ──────────────────────────────
-# QyzylShell v1 Makefile
+# QyzylShell v1 Cross-Platform Makefile
 # ──────────────────────────────
 
-CC       := gcc
+UNAME_S := $(shell uname -s)
+
+# ──────────────────────────────
+# Platform-specific settings
+# ──────────────────────────────
+ifeq ($(UNAME_S),Linux)
+    CC       := gcc
+    PREFIX   := /usr/local
+    LDFLAGS  := -lreadline
+    SED_INPLACE := sed -i
+endif
+
+ifeq ($(UNAME_S),Darwin)
+    CC       := clang
+    PREFIX   := /opt/homebrew
+    # Prefer Homebrew’s readline
+    LDFLAGS  := -L$(PREFIX)/opt/readline/lib -I$(PREFIX)/opt/readline/include -lreadline
+    # macOS sed needs a backup suffix
+    SED_INPLACE := sed -i ''
+endif
+
+# ──────────────────────────────
 CFLAGS   := -Wall -Wextra -O2 -g
-LDFLAGS  := -lreadline
 TARGET   := qyzylshell
 SRC      := main.c
 OBJ      := $(SRC:.c=.o)
-PREFIX   := /usr/local
 
 # ──────────────────────────────
 all: $(TARGET)
@@ -38,9 +57,8 @@ install: all
 uninstall:
 	@echo "❌ Removing binary..."
 	sudo rm -f $(PREFIX)/bin/$(TARGET)
-	@echo "🗑️  Removed $(PREFIX)/bin/$(TARGET)."
 	@echo "🧹 Cleaning /etc/shells entry..."
-	sudo sed -i "\|$(PREFIX)/bin/$(TARGET)|d" /etc/shells
+	sudo $(SED_INPLACE) "\|$(PREFIX)/bin/$(TARGET)|d" /etc/shells
 	@echo "✅ Uninstalled cleanly."
 
 # ──────────────────────────────
@@ -55,6 +73,6 @@ help:
 	@echo "QyzylShell Makefile usage:"
 	@echo "  make           - Compile"
 	@echo "  make run       - Compile and run"
-	@echo "  make install   - İnstall and adding to /etc/shells"
-	@echo "  make uninstall - Remove"
-	@echo "  make clean     - Clean"
+	@echo "  make install   - Install to $(PREFIX)/bin"
+	@echo "  make uninstall - Remove from system"
+	@echo "  make clean     - Clean build files"
