@@ -16,6 +16,13 @@
 #define RL_START "\001"
 #define RL_END   "\002"
 
+// Version 1.1
+// 
+// Github: KairaBegudiri
+//
+// Qyzyl Project
+// https://repo.qyzyl.xyz/qpm/sources/
+
 // ──────────────────────────────
 void sigintHandler(int sig) {
     printf("\n(Type 'exit' to quit)\n");
