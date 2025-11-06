@@ -3,7 +3,7 @@
 
 <img width="933" height="703" alt="resim" src="https://github.com/user-attachments/assets/66397eb8-dc2a-4691-95fd-618374595684" />
 
-
+## Supported Operating Systems
 | OS    |  Stable Release Version |
 |-------------- | --------------|
 | GNU/Linux |  QyzylShell v0.6
