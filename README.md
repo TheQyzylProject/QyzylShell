@@ -12,11 +12,17 @@
 | BSD      |  X 
 
 # Installation
-## Gentoo
+## Arch Linux
+add `qyzylrepo` in `/etc/pacman.conf`
 ```shell
-sudo eselect repository add qyzyl git https://repo.qyzyl.xyz/qyzylutils/qyzyl-overlay.git
-sudo emaint sync -r qyzyl
-sudo emerge --ask qyzylshell
+[qyzylrepo]
+SigLevel = Never
+Server = https://mirrors.qyzyl.xyz/custom-repos-for-other-distros/archlinux/$arch
+```
+then;
+```sh
+sudo pacman -Sy
+sudo pacman -S qyzylshell
 ```
 
 ## Manual
