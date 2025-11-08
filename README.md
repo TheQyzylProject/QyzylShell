@@ -12,7 +12,7 @@
 | BSD      |  X 
 
 # Installation
-| OS | Link |
+| Operating Systems | Link |
 |---------|--------|
 | Arch Linux | [Wiki](https://github.com/TheQyzylProject/QyzylShell/wiki) |
 | Debian/Ubuntu | [Wiki](https://github.com/TheQyzylProject/QyzylShell/wiki) |
