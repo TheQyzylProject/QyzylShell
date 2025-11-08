@@ -12,6 +12,11 @@
 | BSD      |  X 
 
 # Installation
+| OS | Link |
+|---------|--------|
+| Arch Linux | Wiki |
+| Debian/Ubuntu | Wiki |
+| Others | Wiki |
 
 # Requirements
 - Unix-like or Unix-based operating system
