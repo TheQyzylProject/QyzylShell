@@ -14,9 +14,10 @@
 # Installation
 | OS | Link |
 |---------|--------|
-| Arch Linux | Wiki |
-| Debian/Ubuntu | Wiki |
-| Others | Wiki |
+| Arch Linux | [Wiki](https://github.com/TheQyzylProject/QyzylShell/wiki) |
+| Debian/Ubuntu | [Wiki](https://github.com/TheQyzylProject/QyzylShell/wiki) |
+| Qunics | Default |
+| Others | [Wiki](https://github.com/TheQyzylProject/QyzylShell/wiki) |
 
 # Requirements
 - Unix-like or Unix-based operating system
