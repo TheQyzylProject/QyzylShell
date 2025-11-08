@@ -25,9 +25,3 @@
 - Unix-like or Unix-based operating system
 - readline
 - readline-devel (for some distributions)
-
-# Uninstall
-```sh
-sudo make uninstall # on QyzylShell directory
-```
-If you deleted the QyzylShell folder, it doesn't matter. You can download it again and use the `sudo make uninstall` command.
