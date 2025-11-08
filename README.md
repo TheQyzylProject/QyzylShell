@@ -12,28 +12,6 @@
 | BSD      |  X 
 
 # Installation
-## Arch Linux
-add `qyzylrepo` in `/etc/pacman.conf`
-```shell
-[qyzylrepo]
-SigLevel = Never
-Server = https://mirrors.qyzyl.xyz/custom-repos-for-other-distros/archlinux/$arch
-```
-then;
-```sh
-sudo pacman -Sy
-sudo pacman -S qyzylshell
-```
-
-## Manual
-```sh
-git clone https://github.com/TheQyzylProject/QyzylShell
-cd QyzylShell
-sudo make install
-```
-target location: `/usr/local/bin/qyzylshell`
-
-On some Linux distributions, compiling programs that use the GNU Readline library may require the development package (for example, `readline-devel` on Void Linux). This package provides the necessary header files such as `readline/readline.h`. Without it, the compiler will report a missing file error even if the `readline` runtime library is installed.
 
 # Requirements
 - Unix-like or Unix-based operating system
