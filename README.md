@@ -16,8 +16,8 @@
 |---------|--------|
 | Arch Linux | [Wiki](https://github.com/TheQyzylProject/QyzylShell/wiki) |
 | Debian/Ubuntu | [Wiki](https://github.com/TheQyzylProject/QyzylShell/wiki) |
+| Manuel installation for GNU/Linux distros | [Wiki](https://github.com/TheQyzylProject/QyzylShell/wiki) |
 | Qunics | Default |
-| Others | [Wiki](https://github.com/TheQyzylProject/QyzylShell/wiki) |
 
 # Requirements
 - Unix-like or Unix-based operating system
